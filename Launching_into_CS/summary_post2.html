@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Launching into CS - Initial post (Unit 6)</title>
+		<title>Launching into CS - Summary post (Unit 8)</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
@@ -71,7 +71,7 @@
 							<article class="post">
 								<header>
 									<div class="title">
-										<h2><a href="">Launching into CS - Initial Post (Unit 6)</a></h2>
+										<h2><a href="">Launching into CS - Summary Post (Unit 8)</a></h2>
 										<p>Identification and discussion of two security technologies and the context in which they can be employed.</p>
 									</div>
 									<div class="meta">
@@ -81,35 +81,39 @@
 								</header>
 								<!--<span class="image featured"><img src="../images/about_me.jpg" alt="" /></span>-->
 								<p>
-									One of the most visible cyber-attacks for end users is the Denial of Service (DoS) attack. 
-									The attack targets the availability of the victim’s resources resulting in frustrated users, lost business, and a damaged reputation. 
+									Denial of Service (DoS) attacks are designed to attack the availability of the victim’s resources. 
+									In case of a possible successful attack, it is one of the most visible ones, since resources are limited to not available resulting in frustrated users, lost business, and a damaged reputation. 
 									The Distributed DoS (DDoS) attack has a growing number of reported incidents, making it one of the most important and fatal threats (Mansfield-Devine, 2015). 
-									A DDoS attack generates flooding traffic to a specific resource to obstruct the legitimate flow of information. This post will identify and discuss two security technologies to tackle DDoS attacks and how they can be employed within an organization.
-									<br><br>
-									One possible technology to protect against a DDoS attack is utilizing a Demilitarized zone (DMZ) in the network design. 
+									The goal of these attacks is to obstruct the legitimate flow of traffic by flooding the target with traffic. 
+									The seriousness of this attack can be found in an example that was provided by Dr. Maria Alvanou: in November 2022 a DDoS attack originating from the Netherlands was responsible for 800 websites of the Greece government being frozen, even blocking electronic prescriptions (Τσιλιόπουλος, 2022). 
+									This summary post will focus on two cyber security technologies that help protect against DDoS attacks.
+								<br><br>
+									The first proposed technology is to adopt a Demilitarized Zone (DMZ) in the network design in combination with a Next Generation Firewall (NGFW). 
 									A DMZ is a carefully controlled perimeter network that is used as a barrier between public or non-trusted networks and internal or protected networks (Rogers, 2022). 
-									The performance of DMZ is mostly effective in combination with one or two firewalls (Rababah, Zhou and Bader, 2018). 
-									The research of Patel (2020) shows that a network designed with one firewall (Cisco ASA) provided enhanced security and performance against TCP SYN flood and ICMP flood attacks.
-									Designing and employing this technology however can be challenging, especially in virtual environments, such as complexity, and risk of misconfiguration (Kasapovic and Biberkic, 2015). 
-									Regardless of these disadvantages, investing in the correct employment and maintenance of this technology offers a better defence against DDoS attacks.
-									<br><br>
-									One other technology to tackle DDoS attacks is to validate legitimate users via a challenge-response authentication, the best-known example being CAPTCHA. 
-									The enormous growth in computational power and artificial intelligence over the last few years makes it so that computers can easily tackle challenge-response authentication. 
-									One prime example can be found in the event ticketing industry, proving the weakness of CAPTCHAs against ticket robots (E. Kaiser and W. -c. Feng, 2010). 
-									Another approach to challenge-response authentication is proof-of-work systems, that require more resources from a user than CAPTCHA. 
-									Although using proof-of-work systems can provide higher security, it is proven to be uneconomical and negatively affects usability (Laurie and Clayton, 2004). 
-									This leaves the flawed CAPTCHA to be the favourable choice of protection. 
-									However, new research such as Patil (2023) might provide a more applicable proof-of-work puzzle system for authentication.
+									The performance of a DMZ is more effective if it is employed in combination with one or two firewalls (s) (Rababah, Zhou, and Bader, 2018). 
+									Patel (2020) has demonstrated that a network designed with one firewall (Cisco ASA) provided enhanced security and performance against TCP SYN flood and ICMP flood attacks. 
+									This, however, as stated in response to the initial response by Abdallah Hamad,  only protects against DDoS attacks on the network layer of the OSI model, and thus the use of Web Application Firewalls was proposed. 
+									Although this is absolutely true, it is better to enhance the security design of Patel (2020) by switching out the traditional firewall in favor of an NGFW. 
+									NGFWs have functionalities that protect against layer 3, 4, and 7 (the application layer) attacks, resulting in the most complete protection in the network design (J. Liang and Y. Kim, 2022). 
+									Leaving the designing and employing of this technology the biggest challenge, especially in virtual environments, such as complexity, and risk of misconfiguration (Kasapovic and Biberkic, 2015).
+								<br><br>
+									The other proposed technology is also a method to protect against application layer DDoS attacks. 
+									This is done by validating legitimate users by enforcing a challenge-response authentication, with the best-known example being CAPTCHA. 
+									The prime benefit of using CAPTCHA over other methods is that it is very cost-efficient, however, the enormous growth in computational power and artificial intelligence over the last few years makes it so that computers can easily tackle challenge-response authentication.
+									The most well-known example that demonstrates this weakness can be found in the ticketing industry, where tickets get scalped by bots leaving legitimate buyers without a ticket (E. Kaiser and W. -c. Feng, 2010). 
+									Another approach that might be more effective is a proof-of-work system, which requires more resources from a user than the weaker CAPTCHA. 
+									Although in theory, a proof-of-work system would provide more security it is proven to be an uneconomical approach that highly affects the usability of a system (Laurie and Clayton, 2004). 
+									Although there is promising research like Patil (2023) in making proof-of-work puzzles a viable applicable technique, for now, the better option is to use CAPTCHA to defend against application layer DDoS Attacks.
 									<br><br><br>
 									REFERENCES:
 									<br><br>
 									E. Kaiser and W. -c. Feng (2010) ‘Helping TicketMaster: Changing the Economics of Ticket Robots with Geographic Proof-of-Work’, in 2010 INFOCOM IEEE Conference on Computer Communications Workshops. 2010 INFOCOM IEEE Conference on Computer Communications Workshops, pp. 1–6. Available at: https://doi.org/10.1109/INFCOMW.2010.5466663.
 									<br><br>
+									J. Liang and Y. Kim (2022) ‘Evolution of Firewalls: Toward Securer Network Using Next Generation Firewall’, in 2022 IEEE 12th Annual Computing and Communication Workshop and Conference (CCWC). 2022 IEEE 12th Annual Computing and Communication Workshop and Conference (CCWC), pp. 0752–0759. Available at: https://doi.org/10.1109/CCWC54503.2022.9720435.
+									<br><br>
 									Kasapovic, S. and Biberkic, E. (2015) ‘Performances of Virtualization in Design of Fully Collapsed Demilitarized Zone’, International Journal of Computer Applications, 975, p. 8887.
 									<br><br>
 									Laurie, B. and Clayton, R. (2004) ‘Proof-of-work proves not to work; version 0.2’, in Workshop on economics and information, security.
-									<br><br>
-									Mansfield-Devine, S. (2015) ‘The growth and evolution of DDoS’, Network Security, 2015(10), pp. 13–20.
 									<br><br>
 									Patel, M. (2020) ‘Demilitarized zone: An exceptional layer of network security to mitigate DDoS attack’.
 									<br><br>
@@ -118,6 +122,8 @@
 									Rababah, B., Zhou, S. and Bader, M. (2018) ‘Evaluation the Performance of DMZ’, International Journal of Wireless and Microwave Technologies, 1(1), pp. 1–13.
 									<br><br>
 									Rogers, B.E. (2022) ‘4.2 Secure network components’, in CISSP Passport. S.l.: McGraw-Hill (Book, Whole), pp. 318–327. Available at: https://go.exlibris.link/1MWsJR2p.
+									<br><br>
+									Τσιλιόπουλος, Ε. (2022) Cyber ​​attack targets 800 services of Greece’s Gov.gr and TAXISnet – Medical prescriptions frozen, Οικονομικός Ταχυδρόμος - ot.gr. Available at: https://www.ot.gr/2022/11/14/english-edition/cyber-attack-targets-800-services-of-greeces-gov-gr-and-taxisnet-medical-prescriptions-frozen/ (Accessed: 2 October 2023).
 								</p>
 								<footer>
 									<ul class="stats">
